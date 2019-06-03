@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    >
+
+    <ImageView
+        android:id="@+id/memberImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        />
+    <TextView
+        android:id="@+id/memberName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="김지훈"
+        android:textSize="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/memberImage"
+        />
+    <TextView
+        android:id="@+id/memberIntroduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/memberImage"
+        android:layout_below="@id/memberName"
+        android:textSize="15dp"
+        android:text="안녕하세요"
+        />
+    <TextView
+        android:id="@+id/memberRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="16dp"
+        android:text="운영진"
+        />
+
+</RelativeLayout>
