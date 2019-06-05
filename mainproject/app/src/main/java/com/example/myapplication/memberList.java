@@ -13,6 +13,12 @@ public class memberList {
         this.memberRank = memberRank;
     }
 
+    public memberList(int memberImage, String memberName, String memberIntroduce) {
+        this.memberImage = memberImage;
+        this.memberName = memberName;
+        this.memberIntroduce = memberIntroduce;
+    }
+
     public int getMemberImage() {
         return memberImage;
     }
