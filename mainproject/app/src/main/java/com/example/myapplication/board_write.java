@@ -92,6 +92,10 @@ public class board_write extends AppCompatActivity {
                 Toast.makeText(this, "삭제 완료", Toast.LENGTH_LONG).show();
                 break;
             }
+            case R.id.btn_picture: {
+
+                break;
+            }
         }
     }
 }
