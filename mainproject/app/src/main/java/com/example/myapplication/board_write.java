@@ -1,8 +1,11 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -31,6 +34,7 @@ public class board_write extends AppCompatActivity {
     private String txt_filename = null;
     private File file = null;
     String timeStamp=null;
+    private static final int PICK_FROM_ALBUM = 1;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,10 +96,7 @@ public class board_write extends AppCompatActivity {
                 Toast.makeText(this, "삭제 완료", Toast.LENGTH_LONG).show();
                 break;
             }
-            case R.id.btn_picture: {
 
-                break;
-            }
         }
     }
 }
