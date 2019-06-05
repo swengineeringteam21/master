@@ -1,5 +1,10 @@
 package com.example.myapplication;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE}, 0);
+
 
         memberList = findViewById(R.id.memberList);
         scheduleList = findViewById(R.id.scheduleList);
@@ -63,8 +72,12 @@ public class MainActivity extends AppCompatActivity {
                 // 게시판 버튼 클릭 이벤트 리스너
                 infoBtnUnderline.setVisibility(View.GONE);
                 boardBtnUnderline.setVisibility(View.VISIBLE);
+
+                Intent intent = new Intent(MainActivity.this, Board.class);
+                startActivity(intent);
             }
         });
+
 
     }
 }
