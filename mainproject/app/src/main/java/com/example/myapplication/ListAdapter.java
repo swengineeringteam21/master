@@ -52,7 +52,7 @@ public class ListAdapter extends BaseAdapter {
         TextView contents = (TextView)convertView.findViewById(R.id.listview_contents);
         TextView name = (TextView)convertView.findViewById(R.id.listview_name);
         ImageView profileImg = (ImageView)convertView.findViewById(R.id.listview_profileImg);
-        ImageView img = (ImageView)convertView.findViewById(R.id.listview_Img);
+
 
         //아이템 설정
         title.setText(contentVO.getTitle());
@@ -69,7 +69,6 @@ public class ListAdapter extends BaseAdapter {
         listItem.setTitle(title);
         listItem.setDay(day);
         listItem.setContents(contents);
-        listItem.setImg(img);
         listItem.setProfileImage(profileImage);
         listItem.setName(name);
 
